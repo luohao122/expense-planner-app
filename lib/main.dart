@@ -12,11 +12,25 @@ class ExpensePlannerApp extends StatelessWidget {
     return MaterialApp(
       title: 'Personal Expenses App',
       theme: ThemeData(
-        primarySwatch: Colors.purple,
-        accentColor: Colors.amber,
-        fontFamily: 'Quicksand',
-        appBarTheme: AppBarTheme(textTheme: ThemeData.light().textTheme.copyWith(title: ),)
-      ),
+          primarySwatch: Colors.purple,
+          accentColor: Colors.amber,
+          fontFamily: 'Quicksand',
+          textTheme: ThemeData.light().textTheme.copyWith(
+                headline6: TextStyle(
+                  fontFamily: 'OpenSans',
+                  fontWeight: FontWeight.bold,
+                  fontSize: 18,
+                ),
+              ),
+          appBarTheme: AppBarTheme(
+            textTheme: ThemeData.light().textTheme.copyWith(
+                  headline6: TextStyle(
+                    fontFamily: 'OpenSans',
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+          )),
       home: ExpensePlannerPage(),
     );
   }
